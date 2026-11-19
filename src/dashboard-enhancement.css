@@ -77,3 +77,72 @@ body.gc-dashboard-mode>footer.footer{display:none!important}
 .form-note{padding:12px;border:1px solid #d8c9a8;border-radius:10px;background:#fbf7ed;color:#67552f;font-size:.88rem;line-height:1.55}
 .form-section-label{margin-top:8px;padding-top:12px;border-top:1px solid #e8e2d7;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8a713e}
 #gc-demo-identity{display:block;margin:12px 0;color:#c9c0ad;font-size:.72rem;line-height:1.5}
+
+
+/* Dashboard refinement overrides */
+.gc-admin-main{background:linear-gradient(180deg,#f5f3eb 0%,#f7f6f0 100%)}
+.gc-admin-topbar{padding-bottom:24px;border-bottom:1px solid #e4dfd1;margin-bottom:22px}
+.gc-admin-topbar h1{font-size:clamp(30px,3vw,42px);letter-spacing:-.7px}
+.gc-workspace-landscape{height:142px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;padding:20px 25px;margin:0 0 20px;background:linear-gradient(90deg,rgba(15,43,31,.72),rgba(15,43,31,.06)),url("/images/tegalalang-rice-terraces.jpg") center 48%/cover;color:#fff;overflow:hidden}
+.gc-workspace-landscape span{font-size:9px;letter-spacing:2.4px}
+.gc-workspace-landscape strong{font:28px Georgia,serif}
+.gc-info-banner{padding:18px 22px;background:#f7f0df;border:1px solid #e2d2ac;border-left:4px solid #b99555;margin-bottom:25px;color:#5e4b2c}
+.gc-info-banner strong{display:block;font-size:10px;letter-spacing:1.4px;margin-bottom:7px}
+.gc-info-banner p{font-size:12px;line-height:1.75;margin:0}
+.gc-welcome-row{padding:23px 25px;background:#fff;border:1px solid #e6e1d5;margin-bottom:20px;box-shadow:0 8px 24px rgba(33,52,41,.035)}
+.gc-welcome-row h2{font:30px Georgia,serif;color:#1b3b30;margin:4px 0 8px}
+.gc-welcome-row p:not(.eyebrow){font-size:12px;color:#7c867d}
+.gc-stat-grid>*{background:#fff!important;border:1px solid #e8e3d8!important;box-shadow:0 6px 18px rgba(28,49,37,.04)}
+.gc-overview-grid{gap:16px}
+.gc-overview-card{background:#fff;border:1px solid #e7e2d7;padding:22px;box-shadow:0 6px 20px rgba(28,49,37,.035)}
+.gc-card-heading{padding-bottom:14px;border-bottom:1px solid #eee9df}
+.gc-card-heading h3{font:22px Georgia,serif;color:#1d3b30;margin:5px 0}
+.gc-principle-strip{background:#e9eee7;border:1px solid #dce4da;padding:17px 20px;margin-top:18px;display:flex;flex-direction:column;gap:7px}
+.gc-principle-strip strong{font:19px Georgia,serif;color:#244336}
+.gc-principle-strip span{font-size:11px;line-height:1.7;color:#647468}
+.gc-report-note{font-size:11px;color:#68786c;margin-top:18px}
+.gc-admin-footer{padding-top:18px;margin-top:24px;border-top:1px solid #e4dfd1;color:#879087;font-size:10px}
+.gc-sidebar{box-shadow:5px 0 24px rgba(14,39,29,.06)}
+.gc-side-link{transition:background .18s ease,transform .18s ease}
+.gc-side-link:hover{transform:translateX(2px)}
+@media(max-width:900px){.gc-workspace-landscape{height:118px}}
+@media(max-width:600px){.gc-workspace-landscape{height:105px}.gc-welcome-row{padding:18px}}
+
+/* Refined workspace: warmer layered surfaces and stable officer identity layout */
+#dashboard-view{background:#e8e9df!important}
+.gc-admin-layout{background:#e8e9df!important}
+.gc-admin-main{background:linear-gradient(135deg,#e9ebe2 0%,#f1f0e8 48%,#e4e8df 100%)!important}
+.gc-admin-topbar{padding:18px 22px!important;margin:0 0 22px!important;background:#f7f5ed;border:1px solid #e1dfd2;box-shadow:0 5px 18px rgba(29,52,40,.045)}
+.gc-admin-topbar h1{font-size:35px!important}
+.gc-info-banner{background:linear-gradient(110deg,#f6edda,#f2f0e5)!important;border-color:#ddc99e!important;box-shadow:0 5px 18px rgba(72,57,28,.045)}
+.gc-panel{background:rgba(250,249,243,.88)!important;border:1px solid #dedfd3!important;padding:24px!important;box-shadow:0 8px 24px rgba(31,55,42,.055)!important}
+.gc-overview-panel{background:transparent!important;border:0!important;padding:0!important;box-shadow:none!important}
+.gc-welcome-row{background:#f8f7f0!important;border:1px solid #dfe1d5!important;box-shadow:0 8px 22px rgba(29,52,40,.06)!important}
+.gc-stat-grid>*{background:linear-gradient(145deg,#fbfaf4,#e9eee5)!important;border:1px solid #dce1d6!important}
+.gc-overview-card{background:#f9f8f1!important;border:1px solid #dce0d5!important;box-shadow:0 8px 22px rgba(29,52,40,.055)!important}
+.gc-principle-strip{background:linear-gradient(100deg,#dce6dc,#e9eadf)!important;border-color:#d2ddcf!important}
+.gc-table-wrap,.table-wrap{background:#f9f8f2!important;border:1px solid #dfe0d5!important;box-shadow:0 8px 22px rgba(29,52,40,.045)}
+.gc-table-wrap table,.table-wrap table{background:#f9f8f2!important}
+.gc-table-wrap thead,.table-wrap thead{background:#e5e9df!important}
+.gc-table-wrap tbody tr:nth-child(even),.table-wrap tbody tr:nth-child(even){background:#f1f2eb!important}
+.gc-table-wrap tbody tr:hover,.table-wrap tbody tr:hover{background:#e8eee5!important}
+.gc-admin-footer{color:#738074!important}
+.gc-sidebar-bottom{display:flex!important;flex-direction:column!important;gap:10px!important}
+.gc-sidebar-bottom>small{display:block!important;font-size:10px!important;line-height:1.5!important;color:#d7c18e!important;white-space:normal!important;overflow-wrap:anywhere}
+.gc-demo-user{display:grid!important;grid-template-columns:38px minmax(0,1fr)!important;grid-template-rows:auto auto!important;align-items:center!important;column-gap:10px!important;row-gap:0!important;padding:15px 4px!important}
+.gc-demo-user .gc-avatar{grid-column:1;grid-row:1 / span 2}
+.gc-demo-user>div{grid-column:2;min-width:0}
+.gc-demo-user strong{display:block!important;line-height:1.4!important;font-size:11px!important;white-space:normal!important;overflow-wrap:anywhere!important}
+.gc-demo-user small{display:block!important;line-height:1.45!important;font-size:10px!important;margin-top:3px!important;white-space:normal!important;overflow-wrap:anywhere!important;color:#c3d0c6!important}
+.gc-back-public{margin-top:3px!important;white-space:normal!important}
+@media(max-width:900px){
+ .gc-admin-layout{grid-template-columns:205px minmax(0,1fr)!important}
+ .gc-admin-main{padding:18px!important}
+}
+@media(max-width:650px){
+ .gc-admin-layout{grid-template-columns:1fr!important}
+ .gc-sidebar{position:relative!important;height:auto!important;min-height:0!important}
+ .gc-sidebar-bottom{margin-top:18px!important}
+ .gc-admin-main{padding:14px!important}
+ .gc-admin-topbar{align-items:flex-start!important;flex-direction:column!important}
+}

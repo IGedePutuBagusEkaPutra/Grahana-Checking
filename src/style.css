@@ -9,55 +9,227 @@
 @media(max-width:900px){.hero{padding:55px 7%;gap:4%}.business-grid{grid-template-columns:repeat(2,1fr)}.header{padding:0 5%}.dashboard-shell{padding:35px 5%}.report-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:650px){.header{height:70px}.menu-toggle{display:block}nav{display:none;position:absolute;top:70px;left:0;right:0;background:#fbfaf6;padding:18px 6%;border-bottom:1px solid var(--line);align-items:stretch;flex-direction:column;gap:18px}nav.nav-open{display:flex}nav a{display:block}.hero{grid-template-columns:1fr;padding:48px 7%;gap:30px}.hero h1{font-size:46px}.hero-visual{height:260px}.hero-actions{flex-wrap:wrap}.metrics{flex-wrap:wrap;justify-content:flex-start;padding:20px 7%}.metrics div{width:44%}.section{padding:55px 7%}.section-heading{display:block}.section-heading h2{font-size:34px}.section-heading>p{margin-top:13px}.filter-row{flex-direction:column}.select-label{justify-content:space-between}.select-label select{flex:1}.business-grid{grid-template-columns:1fr}.about-section{padding:50px 7%}.about-inner{grid-template-columns:1fr;gap:20px}.about-inner h2{font-size:36px}.footer{padding:26px 7%;align-items:flex-start;flex-direction:column}.dashboard-top{align-items:flex-start;flex-direction:column}.dashboard-top h1{font-size:34px}.dashboard-stats{grid-template-columns:repeat(2,1fr)}.dashboard-tabs{overflow-x:auto}.dash-tab{white-space:nowrap;padding:12px}.dash-panel{padding:15px}.panel-heading{align-items:flex-start;flex-direction:column}.panel-heading h2{font-size:27px}.table-tools>*{width:100%}.table-tools input{min-width:100%}.report-grid{grid-template-columns:repeat(2,1fr)}}
 
-/* Visual refresh: premium Bali editorial photography */
-:root{--forest:#173d32;--forest2:#244f40;--gold:#c7a76c;--ivory:#f5f2e9;--line:#e5e0d4}
-body{background:var(--ivory);color:#26392f}
-.notice-bar{font-size:9px;letter-spacing:2.2px;padding:10px 14px;background:#102d25}
-.header{background:rgba(250,249,244,.96);backdrop-filter:blur(14px);height:84px;box-shadow:0 5px 24px rgba(23,61,50,.04)}
-.hero{padding-top:82px;padding-bottom:78px;min-height:590px;gap:6%;}
-.hero h1{font-size:clamp(48px,5.5vw,76px);line-height:1.04;letter-spacing:-2.3px}
-.hero-lead{font-size:14px;max-width:510px;color:#68766d}
-.hero-visual{height:430px;border-radius:5px;background:#d9ded0 url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1500&q=90') center/cover no-repeat;box-shadow:0 24px 55px rgba(25,53,42,.16)}
-.hero-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,35,28,.02) 28%,rgba(13,35,28,.58) 100%)}
-.hero-visual .visual-sun,.hero-visual .visual-hill,.hero-visual .temple{display:none}
-.visual-label{z-index:1;right:28px;bottom:26px;text-shadow:0 2px 12px rgba(0,0,0,.45)}
-.visual-label strong{font-size:54px;letter-spacing:9px}
-.visual-label span,.visual-label small{font-size:9px;letter-spacing:2.5px}
-.metrics{background:#e8e9df;padding:28px 8%;border-top:1px solid #dfe2d6;border-bottom:1px solid #dfe2d6}
-.metrics strong{font-size:34px}
-.section{padding-top:92px;padding-bottom:96px}
-.section-heading h2{font-size:clamp(34px,4vw,49px);letter-spacing:-1.2px}
-.section-heading>p{font-size:13px;max-width:410px}
-.category-tab{border-radius:3px;padding:11px 17px;font-size:11px}
-.search-field,.select-label select{border-radius:3px}
-.business-grid{gap:22px}
-.business-card{border:1px solid #e7e2d8;border-radius:4px;overflow:hidden;box-shadow:0 7px 22px rgba(28,53,41,.035)}
-.business-card:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(28,53,41,.12)}
-.business-art{height:225px;background:#d9dfd4;isolation:isolate}
-.business-art:before,.business-art:after{display:none}
-.business-photo{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1);}
-.business-card:hover .business-photo{transform:scale(1.055)}
-.business-art:after{content:"";display:block;position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,30,23,.12),transparent 45%,rgba(12,30,23,.2));pointer-events:none}
-.business-art.photo-fallback{background:linear-gradient(135deg,#dce3d7,#b8c6b3)}
-.art-category{z-index:2;top:16px;left:16px;border-radius:2px;background:rgba(250,249,244,.94);color:#294d3d;font-weight:700;letter-spacing:1.1px;padding:8px 10px}
-.art-number{z-index:2;top:16px;right:16px;color:#fff;background:rgba(20,43,34,.35);border-radius:2px;padding:6px 8px;font-size:16px}
-.business-card-body{padding:22px 22px 20px}
-.card-location{font-size:10px;letter-spacing:.25px}
-.business-card h3{font-size:25px;letter-spacing:-.3px}
-.card-description{font-size:12px;line-height:1.75;min-height:62px}
-.info-pill,.public-status{border-radius:2px;padding:7px 9px}
-.card-link{font-weight:700;font-size:11px;padding-top:17px}
-.about-section{background:#e8e9df;position:relative;overflow:hidden}
-.about-section:after{content:"BALI";position:absolute;right:5%;bottom:-70px;font:clamp(100px,20vw,260px) Georgia;color:rgba(23,61,50,.035);pointer-events:none}
-.about-inner{position:relative;z-index:1}
-.about-inner h2{font-size:clamp(36px,4vw,50px)}
-.footer{background:#102d25;padding-top:34px;padding-bottom:34px}
-.dashboard-shell{max-width:1540px;padding-top:54px}
-.dashboard-top h1{font-size:46px;letter-spacing:-1px}
-.dashboard-stats{gap:16px}
-.stat-card{border-radius:4px;box-shadow:0 8px 22px rgba(25,53,42,.035);padding:23px}
-.stat-card strong{font-size:34px}
-.dash-panel{border-radius:4px;box-shadow:0 8px 28px rgba(25,53,42,.035)}
-.critical-warning{border-radius:3px}
-@media(max-width:900px){.hero{min-height:0;padding:58px 7%;gap:34px}.hero-visual{height:350px}.business-art{height:195px}}
-@media(max-width:640px){.hero{padding-top:45px;padding-bottom:48px}.hero h1{font-size:46px}.hero-visual{height:270px}.section{padding-top:62px;padding-bottom:65px}.business-art{height:220px}.metrics{align-items:flex-start}.metrics div{gap:8px}.metrics strong{font-size:27px}.metrics span{font-size:9px}}
+
+/* Visual refinement: local category photography, editorial sections and workspace clarity */
+.business-art{background-size:cover;background-position:center;isolation:isolate}
+.business-art:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,35,27,.08),rgba(13,35,27,.58));z-index:-1}
+.art-category-villa{background-image:url("/images/villa-bali.jpg")!important}
+.art-category-restaurant{background-image:url("/images/restaurant-bali.jpg")!important}
+.art-category-mall{background-image:url("/images/mall-bali.jpg")!important}
+.category-showcase,.process-section{padding:76px 9%;background:#fbfaf6}
+.showcase-grid{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:18px;margin-top:28px}
+.showcase-card{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:310px;padding:25px;color:white;text-decoration:none;overflow:hidden;background:#28483a}
+.showcase-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.showcase-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,25,19,.03),rgba(9,25,19,.76))}
+.showcase-card:hover img{transform:scale(1.045)}
+.showcase-card>*:not(img){position:relative;z-index:1}
+.showcase-index{font-size:9px;letter-spacing:2px;margin-bottom:auto}
+.showcase-card strong{font:28px Georgia,serif;margin-top:110px}
+.showcase-card>span:last-child{font-size:11px;color:#e8e9df;margin-top:8px}
+.process-section{background:#e9ece4}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:35px;border-top:1px solid #cfd5c9;border-bottom:1px solid #cfd5c9}
+.process-grid article{padding:25px 24px 28px 0;border-right:1px solid #cfd5c9;margin-right:22px}
+.process-grid article:last-child{border:0;margin:0}
+.process-grid article>span,.about-values span{font:italic 22px Georgia,serif;color:#b18e53}
+.process-grid h3{font:21px Georgia,serif;color:#203a30;margin:18px 0 9px}
+.process-grid p,.about-values p{font-size:12px;line-height:1.8;color:#717b72;margin:0}
+.about-section{padding:82px 9%;background:#f7f6f0}
+.about-inner{max-width:1180px;margin:auto}
+.about-values{display:grid;grid-template-columns:repeat(3,1fr);gap:35px;margin-top:52px;padding-top:28px;border-top:1px solid #e0e0d6}
+.about-values strong{display:block;font:20px Georgia,serif;color:#263d31;margin:12px 0}
+.contact-section{display:grid;grid-template-columns:1fr 1fr;gap:8%;padding:78px 9%;background:#18392f;color:#f7f5ec}
+.contact-copy h2{font:44px/1.1 Georgia,serif;font-weight:400;margin:0 0 20px}
+.contact-copy h2 em{color:#d2bd91}
+.contact-copy>p:not(.eyebrow){max-width:440px;color:#c1cec4;font-size:13px;line-height:1.8}
+.contact-section .eyebrow{color:#d2b77e}
+.contact-whatsapp{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-top:28px;padding:22px 25px;background:#f1eee4;color:#18392f;text-decoration:none;max-width:380px;border-left:4px solid #c4a46a;transition:transform .2s ease}
+.contact-whatsapp:hover{transform:translateY(-3px)}
+.contact-whatsapp span,.contact-details span{font-size:9px;letter-spacing:2px;color:#9a7d4a}
+.contact-whatsapp strong{font:30px Georgia,serif}
+.contact-whatsapp small{font-size:11px;color:#5e7063}
+.contact-details{display:grid;grid-template-columns:1fr 1fr;align-content:center;gap:0 24px;border-top:1px solid rgba(255,255,255,.2)}
+.contact-details>div{padding:22px 0;border-bottom:1px solid rgba(255,255,255,.2);display:flex;flex-direction:column;gap:9px}
+.contact-details strong,.contact-details a{font:17px Georgia,serif;color:#f4f0e4;text-decoration:none;overflow-wrap:anywhere}
+.contact-details a:hover{text-decoration:underline}
+.footer{gap:18px;flex-wrap:wrap}
+.footer-contact{display:flex;gap:22px}
+.footer-contact a{font-size:11px;color:#d5d8ce;text-decoration:none}
+.footer-contact a:hover{color:#d7bd8a}
+.history-overview{display:grid;grid-template-columns:1.6fr 1fr;gap:24px;padding:25px 28px;background:#fff;border:1px solid #e5e2d8;margin:20px 0 30px}
+.history-overview span{display:block;font-size:9px;letter-spacing:1.8px;color:#a1844e;margin-bottom:10px}
+.history-overview strong{font:23px Georgia,serif;color:#203a30}
+.history-overview p{font-size:12px;line-height:1.8;color:#727c73;max-width:620px;margin:10px 0 0}
+.history-overview-side{padding-left:25px;border-left:1px solid #e5e2d8}
+.history-overview-side small{display:block;font-size:11px;line-height:1.6;color:#7a837b;margin-top:9px}
+.history-list-heading{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:12px}
+.history-list-heading h3{font:25px Georgia,serif;color:#203a30;margin:0}
+.history-list-heading>span{font-size:10px;color:#899087}
+.history-list{background:#fff;border:1px solid #e5e2d8;padding:12px 24px}
+.gc-admin-footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.gc-side-link span{display:none!important}
+.gc-side-link{padding-left:15px!important}
+@media(max-width:900px){.showcase-grid{grid-template-columns:1fr 1fr}.showcase-card:first-child{grid-column:span 2}.process-grid{grid-template-columns:1fr 1fr}.process-grid article:nth-child(2){border-right:0}.contact-section{grid-template-columns:1fr;gap:38px}}
+@media(max-width:600px){.category-showcase,.process-section,.about-section,.contact-section{padding:52px 6%}.showcase-grid,.process-grid,.about-values,.contact-details,.history-overview{grid-template-columns:1fr}.showcase-card:first-child{grid-column:auto}.showcase-card{min-height:250px}.process-grid article{border-right:0;border-bottom:1px solid #cfd5c9;margin:0;padding:22px 0}.contact-details{border-top:0}.history-overview-side{padding:18px 0 0;border-left:0;border-top:1px solid #e5e2d8}.history-list-heading{align-items:flex-start;gap:12px;flex-direction:column}.gc-admin-footer{font-size:10px}}
+
+
+/* Final visual corrections requested: Tegallalang imagery, distinct category photos, clearer workspace */
+.hero-tegalalang{position:relative;min-height:420px;background-image:linear-gradient(90deg,rgba(15,40,29,.16),rgba(15,40,29,.02)),url("/images/tegalalang-rice-terraces.jpg");background-size:cover;background-position:center 54%;overflow:hidden}
+.hero-tegalalang:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,32,23,.52),transparent 58%)}
+.tegalalang-caption{position:absolute;z-index:2;left:30px;bottom:30px;color:#fff;display:flex;flex-direction:column;gap:8px;text-shadow:0 2px 14px #10251c88}
+.tegalalang-caption span{font-size:9px;letter-spacing:2.5px}
+.tegalalang-caption strong{font:34px/1.05 Georgia,serif}
+.tegalalang-caption small{font-size:11px;letter-spacing:1px}
+.business-art{background-size:cover!important;background-position:center!important}
+.business-art:before,.business-art:after{display:none!important}
+.art-category-villa{background-image:url("/images/villa-bali.jpg")!important}
+.art-category-restaurant{background-image:url("/images/restaurant-bali.jpg")!important}
+.art-category-mall{background-image:url("/images/mall-bali.jpg")!important}
+.art-category{z-index:2}
+.art-number{z-index:2;color:white!important;text-shadow:0 1px 5px #17352c}
+.gc-admin-main{background:linear-gradient(180deg,#f5f3eb 0%,#f7f6f0 100%)}
+.gc-admin-topbar{padding-bottom:24px;border-bottom:1px solid #e4dfd1;margin-bottom:22px}
+.gc-admin-topbar h1{font-size:clamp(30px,3vw,42px);letter-spacing:-.7px}
+.gc-workspace-landscape{height:142px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;padding:20px 25px;margin:0 0 20px;background:linear-gradient(90deg,rgba(15,43,31,.72),rgba(15,43,31,.06)),url("/images/tegalalang-rice-terraces.jpg") center 48%/cover;color:#fff;overflow:hidden}
+.gc-workspace-landscape span{font-size:9px;letter-spacing:2.4px}
+.gc-workspace-landscape strong{font:28px Georgia,serif}
+.gc-info-banner{padding:18px 22px;background:#f7f0df;border:1px solid #e2d2ac;border-left:4px solid #b99555;margin-bottom:25px;color:#5e4b2c}
+.gc-info-banner strong{display:block;font-size:10px;letter-spacing:1.4px;margin-bottom:7px}
+.gc-info-banner p{font-size:12px;line-height:1.75;margin:0}
+.gc-welcome-row{padding:23px 25px;background:#fff;border:1px solid #e6e1d5;margin-bottom:20px;box-shadow:0 8px 24px rgba(33,52,41,.035)}
+.gc-welcome-row h2{font:30px Georgia,serif;color:#1b3b30;margin:4px 0 8px}
+.gc-welcome-row p:not(.eyebrow){font-size:12px;color:#7c867d}
+.gc-stat-grid{gap:14px}
+.gc-stat-grid>*{background:#fff!important;border:1px solid #e8e3d8!important;box-shadow:0 6px 18px rgba(28,49,37,.04)}
+.gc-overview-grid{gap:16px}
+.gc-overview-card{background:#fff;border:1px solid #e7e2d7;padding:22px;box-shadow:0 6px 20px rgba(28,49,37,.035)}
+.gc-card-heading{padding-bottom:14px;border-bottom:1px solid #eee9df}
+.gc-card-heading h3{font:22px Georgia,serif;color:#1d3b30;margin:5px 0}
+.gc-recent-list,.gc-status-summary{padding-top:12px}
+.gc-panel{animation:workspaceFade .28s ease both}
+@keyframes workspaceFade{from{opacity:.55;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+.gc-principle-strip{background:#e9eee7;border:1px solid #dce4da;padding:17px 20px;margin-top:18px;display:flex;flex-direction:column;gap:7px}
+.gc-principle-strip strong{font:19px Georgia,serif;color:#244336}
+.gc-principle-strip span{font-size:11px;line-height:1.7;color:#647468}
+.gc-report-note{font-size:11px;color:#68786c;margin-top:18px}
+.gc-admin-footer{padding-top:18px;margin-top:24px;border-top:1px solid #e4dfd1;color:#879087;font-size:10px}
+.gc-sidebar{box-shadow:5px 0 24px rgba(14,39,29,.06)}
+.gc-side-link{transition:background .18s ease,transform .18s ease}
+.gc-side-link:hover{transform:translateX(2px)}
+@media(max-width:900px){.hero-tegalalang{min-height:300px}.gc-workspace-landscape{height:118px}}
+@media(max-width:600px){.hero-tegalalang{min-height:260px}.tegalalang-caption{left:18px;bottom:18px}.tegalalang-caption strong{font-size:26px}.gc-workspace-landscape{height:105px}.gc-welcome-row{padding:18px}}
+
+
+.art-record-gc-001{background-image:url("/images/villa-ubud.jpg")!important}
+.art-record-gc-002{background-image:url("/images/villa-coastal.jpg")!important}
+.art-record-gc-003{background-image:url("/images/restaurant-sari.jpg")!important}
+.art-record-gc-004{background-image:url("/images/restaurant-warung.jpg")!important}
+.art-record-gc-006{background-image:url("/images/restaurant-coffee.jpg")!important}
+
+/* Replace the previous repeated card photos with six distinct local photographs. */
+.art-record-gc-001{background-image:url("/images/villa-ubud-new.jpg")!important}
+.art-record-gc-002{background-image:url("/images/villa-coastal-new.jpg")!important}
+.art-record-gc-003{background-image:url("/images/restaurant-sari-new.jpg")!important}
+.art-record-gc-004{background-image:url("/images/restaurant-warung-new.jpg")!important}
+.art-record-gc-005{background-image:url("/images/mall-courtyard-new.jpg")!important}
+.art-record-gc-006{background-image:url("/images/restaurant-coffee-new.jpg")!important}
+.business-art{background-size:cover!important;background-position:center 52%!important}
+
+
+/* GRAHANA — editorial Bali visual direction
+   Inspired by destination storytelling and varied editorial section compositions. */
+:root{
+  --forest:#173b30;
+  --forest2:#285443;
+  --gold:#c4a46a;
+  --ivory:#f5f0e5;
+  --muted:#69776d;
+  --line:#d8d8ca;
+  --clay:#a85f43;
+  --sage:#dce4d6;
+  --paper:#fbf8ef;
+}
+body{background:#f1eee4;color:#263b31}
+.header{background:rgba(250,248,241,.96);backdrop-filter:blur(12px);border-bottom:1px solid #d9d6c9}
+.hero{background:linear-gradient(115deg,#f3efe4 0%,#f3efe4 57%,#e2e8db 57%,#e2e8db 100%);position:relative;isolation:isolate}
+.hero:before{content:"";position:absolute;z-index:-1;right:-70px;top:-105px;width:390px;height:390px;border:1px solid rgba(177,145,91,.22);border-radius:50%;box-shadow:0 0 0 26px rgba(177,145,91,.035),0 0 0 52px rgba(177,145,91,.025)}
+.hero:after{content:"BALI  •  INDONESIA";position:absolute;right:3.5%;bottom:22px;writing-mode:vertical-rl;letter-spacing:4px;font-size:8px;color:#8b927f;opacity:.8}
+.hero-visual{box-shadow:0 24px 55px rgba(34,54,40,.16);border:7px solid rgba(255,255,255,.42)}
+.hero h1{letter-spacing:-2.4px}
+.hero .eyebrow,.section .eyebrow,.section-heading .eyebrow{color:#a36f3f}
+.metrics{background:#193d32;color:#f5f0e5;padding:31px 8%;position:relative;overflow:hidden}
+.metrics:after{content:"";position:absolute;right:-45px;top:-110px;width:300px;height:300px;border:1px solid rgba(214,190,142,.25);border-radius:50%;box-shadow:0 0 0 22px rgba(214,190,142,.04),0 0 0 44px rgba(214,190,142,.035)}
+.metrics div{position:relative;z-index:1}
+.metrics strong{color:#d8bd87;font-size:34px}
+.metrics span{color:#d0d8cd;letter-spacing:.6px}
+.directory-section{background:#e7ebe1;position:relative;isolation:isolate}
+.directory-section:before{content:"";position:absolute;z-index:-1;inset:0;opacity:.35;background-image:radial-gradient(#aeb9a8 .7px,transparent .7px);background-size:13px 13px;mask-image:linear-gradient(90deg,#000,transparent 72%)}
+.directory-section .section-heading h2{font-size:clamp(36px,4vw,48px)}
+.directory-section .search-field,.directory-section .select-label select{background:#fbf9f2;border-color:#d1d8cd}
+.directory-section .business-card{background:#fbf9f2;border:1px solid #d9d8cb;box-shadow:0 8px 24px rgba(35,57,42,.055);transition:transform .28s ease,box-shadow .28s ease}
+.directory-section .business-card:hover{transform:translateY(-5px);box-shadow:0 18px 34px rgba(35,57,42,.12)}
+.directory-section .business-card .card-body{background:linear-gradient(180deg,#fbf9f2,#f5f1e7)}
+.category-showcase{background:#f0e5d5;position:relative;overflow:hidden}
+.category-showcase:before{content:"";position:absolute;left:-95px;top:-135px;width:340px;height:340px;border-radius:50%;background:rgba(177,119,79,.10)}
+.category-showcase:after{content:"";position:absolute;right:5%;bottom:20px;width:110px;height:110px;border:1px solid rgba(151,104,68,.25);transform:rotate(45deg)}
+.category-showcase .section-heading,.category-showcase .showcase-grid{position:relative;z-index:1}
+.category-showcase .section-heading h2{color:#583f31}
+.showcase-card{box-shadow:0 12px 28px rgba(76,52,34,.13);border:1px solid rgba(255,255,255,.5)}
+.showcase-card:nth-child(2){transform:translateY(18px)}
+.showcase-card:nth-child(2):hover{transform:translateY(12px)}
+.showcase-card:nth-child(3){transform:translateY(36px)}
+.showcase-card:nth-child(3):hover{transform:translateY(30px)}
+.process-section{background:#dce5d9;position:relative;overflow:hidden}
+.process-section:after{content:"";position:absolute;right:-100px;bottom:-160px;width:420px;height:420px;border-radius:50%;border:1px solid rgba(69,101,76,.18);box-shadow:0 0 0 25px rgba(69,101,76,.035),0 0 0 50px rgba(69,101,76,.03);pointer-events:none}
+.process-section .section-heading,.process-grid{position:relative;z-index:1}
+.process-grid{border-color:#b8c8b8}
+.process-grid article{border-color:#b8c8b8;padding-left:16px}
+.process-grid article:first-child{padding-left:0}
+.process-grid article>span{display:inline-flex;width:38px;height:38px;align-items:center;justify-content:center;border:1px solid #9caf9e;border-radius:50%;font-size:16px}
+.process-grid h3{color:#214737}
+.about-section{background:#efe6d7;position:relative;overflow:hidden}
+.about-section:before{content:"";position:absolute;left:-90px;top:-100px;width:300px;height:300px;border-radius:50%;background:rgba(175,119,78,.09)}
+.about-inner,.about-values{position:relative;z-index:1}
+.about-values{border-color:#d5c9b5}
+.about-values>div{padding:18px 20px;background:rgba(255,255,255,.34);border:1px solid rgba(180,157,124,.25)}
+.about-values strong{color:#604a37}
+.contact-section{background:linear-gradient(120deg,#183b30,#244c3d);position:relative;overflow:hidden}
+.contact-section:after{content:"";position:absolute;right:-120px;top:-180px;width:490px;height:490px;border:1px solid rgba(218,194,149,.19);border-radius:50%;box-shadow:0 0 0 30px rgba(218,194,149,.035),0 0 0 60px rgba(218,194,149,.025);pointer-events:none}
+.contact-copy,.contact-details{position:relative;z-index:1}
+.contact-whatsapp{box-shadow:0 12px 30px rgba(0,0,0,.13)}
+.footer{background:#102d25;border-top:1px solid rgba(211,187,139,.25)}
+/* Give directory controls and details a crafted, tactile finish. */
+.category-tab{border-radius:2px;background:rgba(250,249,242,.62);border-color:#cbd3c8}
+.category-tab.active,.category-tab:hover{background:#244b3c;border-color:#244b3c}
+.search-field{box-shadow:0 3px 10px rgba(34,55,42,.035)}
+.select-label select{border:1px solid #cbd3c8!important;padding:12px 15px!important}
+.card-badge,.business-card .facility-chip{border-radius:1px}
+@media(max-width:900px){
+ .hero{background:linear-gradient(180deg,#f3efe4 0%,#f3efe4 52%,#e2e8db 52%,#e2e8db 100%)}
+ .hero:after{display:none}
+ .showcase-card:nth-child(2),.showcase-card:nth-child(3){transform:none}
+ .showcase-card:nth-child(2):hover,.showcase-card:nth-child(3):hover{transform:translateY(-4px)}
+}
+@media(max-width:600px){
+ .hero{background:#f3efe4}
+ .metrics{padding:22px 6%}
+ .about-values>div{padding:16px}
+}
+
+
+/* Hero image frame correction — remove the offset/striped border only */
+.hero-visual.hero-tegalalang{
+  border:0!important;
+  outline:0!important;
+  box-shadow:0 18px 42px rgba(31,54,41,.12)!important;
+  border-radius:3px!important;
+  background-clip:padding-box;
+  isolation:isolate;
+}
+.hero-visual.hero-tegalalang:before{
+  content:none!important;
+}
+.hero-visual.hero-tegalalang:after{
+  inset:0!important;
+  border:0!important;
+  border-radius:inherit;
+}

@@ -17,3 +17,10 @@ test("rejects record without id",()=>assert.equal(parseBusinessArray(JSON.string
 test("accepts empty array",()=>assert.equal(parseBusinessArray("[]",[]).ok,true));
 test("rejects invalid mall tenant relation type",()=>assert.equal(validateBusiness({...valid,parentMallId:42}).ok,false));
 test("rejects oversized description",()=>assert.equal(validateBusiness({...valid,description:"x".repeat(241)}).ok,false));
+
+
+test("rejects tenant relation to a non-mall or missing parent", async () => {
+  const { parseBusinessArray } = await import("../src/security.js");
+  const record = { id:"tenant-1", name:"Tenant Demo", category:"Restaurant", location:"Denpasar", status:"Not Checked", description:"Demo", facilities:[], phone:"", website:"", parentMallId:"missing-mall" };
+  assert.equal(parseBusinessArray(JSON.stringify([record]), []).ok, false);
+});
