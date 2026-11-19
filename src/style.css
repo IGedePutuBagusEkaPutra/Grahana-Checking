@@ -8,3 +8,56 @@
 .modal{border:0;padding:0;width:min(560px,calc(100% - 28px));max-height:90vh;overflow:auto;box-shadow:0 20px 80px #0b201c40}.modal::backdrop{background:#14251fcc}.modal form,.detail-modal #detail-content{padding:28px}.modal-heading{display:flex;justify-content:space-between;align-items:start;margin-bottom:20px}.modal-heading h2,.detail-title{font:30px Georgia;font-weight:400;margin:0;color:#2b4033}.icon-button{border:0;background:transparent;font-size:25px;color:#748075}.modal form label{display:flex;flex-direction:column;gap:7px;margin:13px 0;font-size:10px;color:#647165}.modal input,.modal select,.modal textarea{border:1px solid var(--line);padding:11px;font-size:11px;color:#35473a;background:#fff}.modal-actions{display:flex;justify-content:flex-end;gap:9px;padding:0 28px 25px}.form-error{font-size:10px;color:#a13f34}.detail-modal{width:min(520px,calc(100% - 28px))}.detail-modal #detail-content{padding-bottom:10px}.detail-title{margin:0 0 10px}.detail-location,.detail-description,.detail-contact,.detail-footnote{font-size:11px;line-height:1.8;color:#758075}.detail-subtitle{font:18px Georgia;color:#344c3a;margin:22px 0 12px}.facility-list{display:flex;gap:8px;flex-wrap:wrap}.facility-chip{background:#edf1e9;padding:8px 10px;color:#536d59;font-size:10px}.detail-website{font-size:11px;color:#526f59}.toast{position:fixed;bottom:24px;right:24px;background:#17372e;color:#fff;padding:13px 18px;font-size:11px;opacity:0;pointer-events:none;transform:translateY(10px);transition:.2s;z-index:10}.toast.show{opacity:1;transform:translateY(0)}
 @media(max-width:900px){.hero{padding:55px 7%;gap:4%}.business-grid{grid-template-columns:repeat(2,1fr)}.header{padding:0 5%}.dashboard-shell{padding:35px 5%}.report-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:650px){.header{height:70px}.menu-toggle{display:block}nav{display:none;position:absolute;top:70px;left:0;right:0;background:#fbfaf6;padding:18px 6%;border-bottom:1px solid var(--line);align-items:stretch;flex-direction:column;gap:18px}nav.nav-open{display:flex}nav a{display:block}.hero{grid-template-columns:1fr;padding:48px 7%;gap:30px}.hero h1{font-size:46px}.hero-visual{height:260px}.hero-actions{flex-wrap:wrap}.metrics{flex-wrap:wrap;justify-content:flex-start;padding:20px 7%}.metrics div{width:44%}.section{padding:55px 7%}.section-heading{display:block}.section-heading h2{font-size:34px}.section-heading>p{margin-top:13px}.filter-row{flex-direction:column}.select-label{justify-content:space-between}.select-label select{flex:1}.business-grid{grid-template-columns:1fr}.about-section{padding:50px 7%}.about-inner{grid-template-columns:1fr;gap:20px}.about-inner h2{font-size:36px}.footer{padding:26px 7%;align-items:flex-start;flex-direction:column}.dashboard-top{align-items:flex-start;flex-direction:column}.dashboard-top h1{font-size:34px}.dashboard-stats{grid-template-columns:repeat(2,1fr)}.dashboard-tabs{overflow-x:auto}.dash-tab{white-space:nowrap;padding:12px}.dash-panel{padding:15px}.panel-heading{align-items:flex-start;flex-direction:column}.panel-heading h2{font-size:27px}.table-tools>*{width:100%}.table-tools input{min-width:100%}.report-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* Visual refresh: premium Bali editorial photography */
+:root{--forest:#173d32;--forest2:#244f40;--gold:#c7a76c;--ivory:#f5f2e9;--line:#e5e0d4}
+body{background:var(--ivory);color:#26392f}
+.notice-bar{font-size:9px;letter-spacing:2.2px;padding:10px 14px;background:#102d25}
+.header{background:rgba(250,249,244,.96);backdrop-filter:blur(14px);height:84px;box-shadow:0 5px 24px rgba(23,61,50,.04)}
+.hero{padding-top:82px;padding-bottom:78px;min-height:590px;gap:6%;}
+.hero h1{font-size:clamp(48px,5.5vw,76px);line-height:1.04;letter-spacing:-2.3px}
+.hero-lead{font-size:14px;max-width:510px;color:#68766d}
+.hero-visual{height:430px;border-radius:5px;background:#d9ded0 url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1500&q=90') center/cover no-repeat;box-shadow:0 24px 55px rgba(25,53,42,.16)}
+.hero-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,35,28,.02) 28%,rgba(13,35,28,.58) 100%)}
+.hero-visual .visual-sun,.hero-visual .visual-hill,.hero-visual .temple{display:none}
+.visual-label{z-index:1;right:28px;bottom:26px;text-shadow:0 2px 12px rgba(0,0,0,.45)}
+.visual-label strong{font-size:54px;letter-spacing:9px}
+.visual-label span,.visual-label small{font-size:9px;letter-spacing:2.5px}
+.metrics{background:#e8e9df;padding:28px 8%;border-top:1px solid #dfe2d6;border-bottom:1px solid #dfe2d6}
+.metrics strong{font-size:34px}
+.section{padding-top:92px;padding-bottom:96px}
+.section-heading h2{font-size:clamp(34px,4vw,49px);letter-spacing:-1.2px}
+.section-heading>p{font-size:13px;max-width:410px}
+.category-tab{border-radius:3px;padding:11px 17px;font-size:11px}
+.search-field,.select-label select{border-radius:3px}
+.business-grid{gap:22px}
+.business-card{border:1px solid #e7e2d8;border-radius:4px;overflow:hidden;box-shadow:0 7px 22px rgba(28,53,41,.035)}
+.business-card:hover{transform:translateY(-5px);box-shadow:0 18px 38px rgba(28,53,41,.12)}
+.business-art{height:225px;background:#d9dfd4;isolation:isolate}
+.business-art:before,.business-art:after{display:none}
+.business-photo{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1);}
+.business-card:hover .business-photo{transform:scale(1.055)}
+.business-art:after{content:"";display:block;position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,30,23,.12),transparent 45%,rgba(12,30,23,.2));pointer-events:none}
+.business-art.photo-fallback{background:linear-gradient(135deg,#dce3d7,#b8c6b3)}
+.art-category{z-index:2;top:16px;left:16px;border-radius:2px;background:rgba(250,249,244,.94);color:#294d3d;font-weight:700;letter-spacing:1.1px;padding:8px 10px}
+.art-number{z-index:2;top:16px;right:16px;color:#fff;background:rgba(20,43,34,.35);border-radius:2px;padding:6px 8px;font-size:16px}
+.business-card-body{padding:22px 22px 20px}
+.card-location{font-size:10px;letter-spacing:.25px}
+.business-card h3{font-size:25px;letter-spacing:-.3px}
+.card-description{font-size:12px;line-height:1.75;min-height:62px}
+.info-pill,.public-status{border-radius:2px;padding:7px 9px}
+.card-link{font-weight:700;font-size:11px;padding-top:17px}
+.about-section{background:#e8e9df;position:relative;overflow:hidden}
+.about-section:after{content:"BALI";position:absolute;right:5%;bottom:-70px;font:clamp(100px,20vw,260px) Georgia;color:rgba(23,61,50,.035);pointer-events:none}
+.about-inner{position:relative;z-index:1}
+.about-inner h2{font-size:clamp(36px,4vw,50px)}
+.footer{background:#102d25;padding-top:34px;padding-bottom:34px}
+.dashboard-shell{max-width:1540px;padding-top:54px}
+.dashboard-top h1{font-size:46px;letter-spacing:-1px}
+.dashboard-stats{gap:16px}
+.stat-card{border-radius:4px;box-shadow:0 8px 22px rgba(25,53,42,.035);padding:23px}
+.stat-card strong{font-size:34px}
+.dash-panel{border-radius:4px;box-shadow:0 8px 28px rgba(25,53,42,.035)}
+.critical-warning{border-radius:3px}
+@media(max-width:900px){.hero{min-height:0;padding:58px 7%;gap:34px}.hero-visual{height:350px}.business-art{height:195px}}
+@media(max-width:640px){.hero{padding-top:45px;padding-bottom:48px}.hero h1{font-size:46px}.hero-visual{height:270px}.section{padding-top:62px;padding-bottom:65px}.business-art{height:220px}.metrics{align-items:flex-start}.metrics div{gap:8px}.metrics strong{font-size:27px}.metrics span{font-size:9px}}

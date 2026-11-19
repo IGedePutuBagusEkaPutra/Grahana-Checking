@@ -17,12 +17,8 @@ export function validateBusiness(input) {
   if (typeof input.description !== "string" || input.description.length > 240) return { ok:false, error:"Deskripsi maksimal 240 karakter." };
   if (phone && !/^[0-9+()\-\s]{7,20}$/.test(phone)) return { ok:false, error:"Format nomor kontak tidak valid." };
   if (website && !safeHttpUrl(website)) return { ok:false, error:"Website harus menggunakan http:// atau https://." };
-  if (input.parentMallId !== null && input.parentMallId !== undefined && (typeof input.parentMallId !== "string" || input.parentMallId.length > 60)) return { ok:false, error:"Relasi tenant tidak valid." };
-  if (input.category === "Mall" && input.parentMallId) return { ok:false, error:"Mall tidak dapat menjadi tenant." };
-  const docStatus = ["Available","Not Found","Needs Review"].includes(input.docStatus) ? input.docStatus : "Needs Review";
-  const source = cleanString(input.source,120), checkedDate = cleanString(input.checkedDate,10), inspectionNotes = cleanString(input.inspectionNotes,500);
-  if (checkedDate && !/^\d{4}-\d{2}-\d{2}$/.test(checkedDate)) return { ok:false, error:"Tanggal pemeriksaan tidak valid." };
-  return { ok:true, value:{ name, category:input.category, location, status:input.status, description, phone, website, facilities, parentMallId:input.parentMallId || null, publicInfoStatus:"Available", docStatus, source, checkedDate, inspectionNotes } };
+  if (input.parentMallId !== null && input.parentMallId !== undefined && typeof input.parentMallId !== "string") return { ok:false, error:"Relasi tenant tidak valid." };
+  return { ok:true, value:{ name, category:input.category, location, status:input.status, description, phone, website, facilities, parentMallId:input.parentMallId || null, publicInfoStatus:"Available" } };
 }
 
 export function safeHttpUrl(value) {
@@ -42,13 +38,6 @@ export function parseBusinessArray(raw, fallback) {
       const checked = validateBusiness(item);
       if (!checked.ok) return { ok:false, value:fallback };
       result.push({ id:item.id, ...checked.value });
-    }
-    const ids = new Set(result.map(x => x.id));
-    for (const record of result) {
-      if (record.parentMallId) {
-        const parent = result.find(x => x.id === record.parentMallId);
-        if (!ids.has(record.parentMallId) || !parent || parent.category !== "Mall" || record.category === "Mall") return { ok:false, value:fallback };
-      }
     }
     return { ok:true, value:result };
   } catch { return { ok:false, value:fallback }; }
